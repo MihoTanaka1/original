@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'TopPageController@index');
+Route::get('/list', 'ListController@index');
+Route::get('/photo', 'PhotoController@index');
+Route::get('/profile', 'ProfileController@index');
+Route::get('/mypage', 'MypageController@index');
