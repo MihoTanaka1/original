@@ -1,35 +1,4 @@
-body {
-  background-color: #efefef;
-  font-size: 14px;
-  color: #333;
-  margin: 0;
-}
-
-h1,h2,h3,h4,h5 {
-  margin: 0 0 10px 0;
-  padding: 0;
-}
-
-.header-navigation {
+topphoto {
   width: 100%;
-  background-color: #fff;
-  padding: 20px 0;
-}
-
-.header-navigation:after {
-  clear: both;
-  display: block;
-  content: " ";
-}
-
-.header-navigation li {
-  float: left;
-  padding: 0 30px;
-  text-align: center;
-  list-style-type: none;
-}
-
-.header-navigation li a {
-  color: #333;
-  text-decoration: none;
+  height:100%;
 }

@@ -1,7 +1,4 @@
 	<nav>
-		<a href="/">トップ</a>
-	
-		<a href="/list">投稿一覧</a>
-		<a href="/photo">絶景写真</a>
 		<a href="/mypage">マイページ</a>
+		<a href="/register">会員登録</a>
 	</nav>
