@@ -1,4 +1,27 @@
-	<nav>
-		<a href="/mypage">マイページ</a>
-		<a href="/register">会員登録</a>
-	</nav>
+<nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
+    <div class="container">
+        <a class="navbar-brand" href="{{ url('/') }}">トップ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left Side Of Navbar -->
+            <ul class="navbar-nav mr-auto">
+            	<li><a class="navbar-brand" href="{{ url('/') }}">トップ</a></li>
+            	<li><a class="navbar-brand" href="{{ url('/list') }}">投稿一覧</a></li>
+            	<li><a class="navbar-brand" href="{{ url('/photo') }}">絶景写真</a></li>
+            </ul>
+
+
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav mr-auto">
+            	<li><a class="navbar-brand" href="{{ url('/mypage') }}">マイページ</a></li>
+
+
+            </ul>
+
+
+        </div>
+    </div>
+</nav>
