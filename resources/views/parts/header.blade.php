@@ -28,6 +28,6 @@
 </head>
 <body>
 	<header>
-		<p class="logo">美しい日本に出会う旅</p>
+	 <a class="logo" href="{{ url('/') }}"><img src="{{ asset('image/logo.jpg') }}" alt="ロゴ"></a>
 		@include("parts.nav")
 	</header>
