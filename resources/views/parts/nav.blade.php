@@ -7,6 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
+                <img src="image/logo.jpg" class="logo" alt="ロゴ"></a>
             	<li><a class="navbar-brand" href="{{ url('/list') }}">投稿一覧</a></li>
             	<li><a class="navbar-brand" href="{{ url('/photo') }}">絶景写真</a></li>
             </ul>

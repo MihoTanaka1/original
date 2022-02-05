@@ -29,6 +29,6 @@
 </head>
 <body>
 	<header>
-	 <a class="logo" href="{{ url('/') }}"><img src="{{ asset('image/logo.jpg') }}" alt="ロゴ"></a>
+	
 		@include("parts.nav")
 	</header>

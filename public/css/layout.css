@@ -1,21 +1,28 @@
 
 .logo {
-  width:20px;
-  height:20px;
+  width:150px;
+  height:150px;
 }
 
 .container {
-  width: 1600px;
-  margin: 0 auto 20px auto;
+  width: 1800px;
+  margin: 0 auto 0 auto;
 }
 
 .top-photo {
-  width:1600px;
+  width:1800px;
   height:900px;
 }
 
-h4 {
+h3 {
   margin-top: 30px;
+  text-align: center;
+  color: #FF7882;
+  border-bottom: 1px solid #FF7882;
+}
+
+h4 {
+  margin-bottom: 30px;
   text-align: center;
   color: #FF7882;
 }
@@ -31,9 +38,11 @@ h4 {
   content: " ";
 }
 .list {
-  width: 200px;
-  margin-right: 300px;
+  width: 400px;
+  margin-right: 70px;
+  margin-left: 70px;
   float: left;
+
 }
 .staff-list:last-child {
   margin-right: 0;
@@ -43,16 +52,20 @@ h4 {
   width: 400px;
   height: 300px;
   display: block;
+　border: 9px solid #FF7882;
 }
 .photo-title {
   color: #FF7882;
   font-size:20px;
   text-align: left;
-
 }
 
 .photo-title {
   color: black;
   font-size:20px;
   text-align: left;
+}
+
+.news-text {
+   text-align: left; 
 }
