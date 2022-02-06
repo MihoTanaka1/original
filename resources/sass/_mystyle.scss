@@ -1,20 +1,20 @@
 img {
-  width: 100%;
+    width:100%;
 }
 
 .logo {
-  width: 150px;
-  height: 150px;
-  margin-right: 40px;
+  width:150px;
+  height:150px;
+  margin-right:40px;
 }
 
 .dark {
-  font-size: 25px;
-  text-align: left;
+    font-size:25px;
+     text-align: left;
+    
 }
-
 .top-photo {
-  margin-bottom: 30px;
+    margin-bottom:30px;
 }
 
 .container {
@@ -23,23 +23,23 @@ img {
 }
 
 .news {
-  font-size: 25px;
-  width: 100px;
-  margin: 0 auto;
+  font-size:25px;
+  width:100px;
+  margin:0 auto;
   text-align: center;
   color: #FF7882;
   border-bottom: 1px solid #FF7882;
 }
 
 .news-bottom {
-  font-size: 20px;
+  font-size:20px;
   margin-bottom: 30px;
   text-align: center;
   color: black;
 }
 
 .card-contents {
-  margin: 0 auto;
+  margin:  0 auto; 
   text-align: center;
 }
 
@@ -50,7 +50,7 @@ img {
 }
 
 .list {
-  width: 400px;
+  width: 400px ;
   float: left;
 }
 
@@ -60,21 +60,20 @@ img {
   width: 400px;
   height: 300px;
   display: block;
-}
 
+}
 .photo-title {
   color: #FF7882;
-  font-size: 20px;
+  font-size:20px;
   text-align: left;
-  margin-bottom: 0px;
+  margin-bottom:0px;
 }
 
 .news-text {
-  text-align: left;
-  font-size: 18px;
+   text-align: left; 
+   font-size:18px;
 }
 
-.dark {
-  color: #333;
+.dark{
+    color:#333;
 }
-
