@@ -18,7 +18,7 @@ img {
 }
 
 .container {
-  width: 1400px;
+  width: 1600px;
   margin: 0 auto;
 }
 
@@ -50,8 +50,9 @@ img {
 }
 
 .list {
-  width: 400px;
+  width: 500px;
   float: left;
+  margin-top: 50px;
 }
 
 .image-list {
@@ -76,5 +77,17 @@ img {
 
 .dark {
   color: #333;
+}
+
+.photo-list {
+  width: 400px;
+  height: 300px;
+  margin-left: 100px;
+}
+
+.photo-title2 {
+  font-size: 30px;
+  margin-left: 100px;
+  text-align: left;
 }
 
