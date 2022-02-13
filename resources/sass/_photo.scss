@@ -1,12 +1,19 @@
 
-.photo-list {
-    width:400px;
-    height:300px;
-    margin-left:100px;
+.photo-list-area {
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  .photo-list-wrap{
+    width:22%;
+    .photo-list-img{
+      height:230px;
+      overflow:hidden;
+    }
+  }
 }
 
-.photo-title2 {
-  font-size:30px;
-  margin-left:100px;
+.photo-text{
+  margin-top:10px;
+  font-size:20px;
   text-align: left;
 }

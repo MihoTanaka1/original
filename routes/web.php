@@ -18,3 +18,4 @@ Route::get('/profile', 'ProfileController@index');
 Route::get('/mypage', 'MypageController@index');
 Route::get('/profile', 'MypageController@profile');
 Route::get('/create', 'MypageController@add')->middleware('auth');
+

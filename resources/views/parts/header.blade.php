@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
-<head>
+<header class="sticky-top">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +26,7 @@
     {{-- この章の後半で作成するCSSを読み込みます --}}
     <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
 </head>
-<body>
+<body style="padding-top: 8rem">
 	<header>
 	
 		@include("parts.nav")
