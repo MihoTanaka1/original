@@ -15,7 +15,8 @@ Route::get('/', 'TopPageController@index');
 Route::get('/list', 'ListController@index');
 Route::get('/photo', 'PhotoController@index');
 Route::get('/profile', 'ProfileController@index');
-Route::get('/mypage', 'MypageController@index');
+Route::get('/mypage', 'MypageController@add')->middleware('auth');
 Route::get('/profile', 'MypageController@profile');
-Route::get('/create', 'MypageController@add')->middleware('auth');
+Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');
