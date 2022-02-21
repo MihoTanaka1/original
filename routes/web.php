@@ -12,11 +12,28 @@
 */
 
 Route::get('/', 'TopPageController@index');
-Route::get('/list', 'ListController@index');
-Route::get('/photo', 'PhotoController@index');
-Route::get('/profile', 'ProfileController@index');
-Route::get('/mypage', 'MypageController@add')->middleware('auth');
-Route::get('/profile', 'MypageController@profile');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+     Route::get('/mypage', 'MypageController@index');
+     Route::get('/profile', 'MypageController@profile');
+});
+   
+
+
+Route::group(['prefix' => 'photo'], function() {
+     Route::get('/index', 'PhotoController@index');
+});
+
+Route::group(['prefix' => 'travel'], function() {
+     Route::get('/index', 'TravelController@index');
+});
+
+Route::group(['prefix' => 'travel', 'middleware' => 'auth'], function() {
+     Route::get('/create', 'TravelController@add');
+     Route::post('create', 'TravelController@create'); 
+});

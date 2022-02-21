@@ -8,8 +8,8 @@
         <main>
     	    <h1>マイページ</h1>
     	    
-    	        <a href="/create">投稿作成</a>
-    	        <a href="/profile">プロフィール</a>
+    	        <a href="/travel/create">投稿作成</a>
+    	        <a href="/admin/profile">プロフィール</a>
         </main>
         @include("parts.footer")
     </body>

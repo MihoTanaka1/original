@@ -6,17 +6,17 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto align-items-center">
                 <div class="logo">
-                    <a href="/"><img src="image/logo.jpg" alt="ロゴ"></a>
+                    <a href="/"><img src="../../image/logo.jpg" alt="ロゴ"></a>
                 </div>
-            	<li class="mr-5"><a class="dark" href="{{ url('/list') }}">投稿一覧</a></li>
-            	<li><a class="dark" href="{{ url('/photo') }}">絶景写真</a></li>
+            	<li class="mr-5"><a class="dark" href="{{ url('/travel/index') }}">投稿一覧</a></li>
+            	<li><a class="dark" href="{{ url('/photo/index') }}">絶景写真</a></li>
             </ul>
 
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav">
                 <div class="nav-right">
-            	    <li><a class="dark" href="{{ url('/mypage') }}">マイページ</a></li>
+            	    <li><a class="dark" href="{{ url('/admin/mypage') }}">マイページ</a></li>
                 </div>
 
             </ul>
