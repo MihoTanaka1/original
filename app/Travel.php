@@ -11,5 +11,10 @@ class Travel extends Model
     public static $rules = array(
         'title' => 'required',
         'body' => 'required',
+        'yosan' => 'required',
+        'kikan' => 'required',
+        'ninnzuu' => 'required',
+        'category' => 'required',
+        'image_path' => 'required',
     );
 }
