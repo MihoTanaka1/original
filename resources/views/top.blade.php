@@ -1,5 +1,7 @@
-@include("parts.header")
-<main>
+@extends('layouts.admin')
+@section('title', '美しい日本に出会う旅')
+
+@section('content')
 	<div class="top-photo">
 		<img src="image/topphoto.jpg" alt="トップ写真">
 	</div>
@@ -49,6 +51,4 @@
 			</div>
 		</div>
 	</div>
-</main>
-
-@include("parts.footer")
+@endsection

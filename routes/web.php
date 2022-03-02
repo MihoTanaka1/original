@@ -22,18 +22,18 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
      Route::get('/mypage', 'MypageController@index');
      Route::get('/profile', 'MypageController@profile');
 });
-   
-
 
 Route::group(['prefix' => 'photo'], function() {
      Route::get('/index', 'PhotoController@index');
+     Route::get('/create', 'PhotoController@add');
+     Route::post('/create', 'PhotoController@create');
 });
 
 Route::group(['prefix' => 'travel'], function() {
-     Route::get('/index', 'TravelController@index');
+    Route::get('/index', 'TravelController@index'); 
 });
 
 Route::group(['prefix' => 'travel', 'middleware' => 'auth'], function() {
      Route::get('/create', 'TravelController@add');
-     Route::post('create', 'TravelController@create'); 
+     Route::post('/create', 'TravelController@create');
 });

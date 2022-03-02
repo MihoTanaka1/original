@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Travel extends Model
 {
+    protected $table = 'travels';
     protected $guarded = array('id');
 
     public static $rules = array(
@@ -15,6 +16,6 @@ class Travel extends Model
         'kikan' => 'required',
         'ninnzuu' => 'required',
         'category' => 'required',
-        'image_path' => 'required',
+        'image' => 'required',
     );
 }

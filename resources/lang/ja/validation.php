@@ -151,5 +151,8 @@ return [
         'yosan' => '予算',
         'kikan' => '期間',
         'ninnzuu' => '人数',
-        'category' => 'カテゴリー'],
+        'category' => 'カテゴリー',
+        'Placename' => '地名',
+        'photo' => '写真'
+        ],
     ];
