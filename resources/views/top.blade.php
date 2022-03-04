@@ -51,7 +51,7 @@
 			</div>
 		</div>
 				<div>
-			<div class="news">PICK UP</div>
+			<div class="pickup">PICK UP</div>
 			<div class="news-bottom">ピックアップ</div>
 		</div>
 		<div class="card-contents">
@@ -59,36 +59,33 @@
 				<div class="list">
 					<a href="AA">
 						<div class="image-list">
-							<div class="image-list-bg"></div>
-							<img src="image/写真1.JPG">
+							<div class="pick-list-bg"></div>
+							<img src="image/屋久島.jpg">
 						</div>
 						<div class="text-list">
-							<p class="photo-title">2021.11.4</p>
-							<p class="news-text">長野</p>
+							<p class="pickup-text">屋久島</p>
 						</div>
 					</a>
 				</div>
 				<div class="list">
 					<a href="AA">
 						<div class="image-list">
-							<div class="image-list-bg"></div>
-							<img src="image/写真2.JPG">
+							<div class="pick-list-bg"></div>
+							<img src="image/大曲花火.jpg">
 						</div>
 						<div class="text-list">
-							<p class="photo-title">202.114</p>
-							<p class="news-text">石垣島</p>
+							<p class="pickup-text">大曲花火大会</p>
 						</div>
 					</a>
 				</div>
 				<div class="list">
 					<a href="AA">
 						<div class="image-list">
-							<div class="image-list-bg"></div>
-							<img src="image/写真3.jpg">
+							<div class="pick-list-bg"></div>
+							<img src="image/青い池.jfif">
 						</div>
 						<div class="text-list">
-							<p class="photo-title">2020.8.11</p>
-							<p class="news-text">立山</p>
+							<p class="pickup-text">立山</p>
 						</div>
 					</a>
 				</div>

@@ -48,6 +48,15 @@ img {
   color: black;
 }
 
+.pickup {
+  font-size: 30px;
+  width: 150px;
+  margin: 0 auto;
+  text-align: center;
+  color: #00AACD;
+  border-bottom: 1px solid #00AACD;
+}
+
 .card-contents {
   margin: 0 auto;
   text-align: center;
@@ -82,6 +91,16 @@ img {
   height: 100%;
 }
 
+.pick-list-bg {
+  background: url(/images/bg-grid-pickup.png?be99795b6775d26fa164dfdce8495f4f) no-repeat left top;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
 .photo-title {
   color: #FF7882;
   font-size: 20px;
@@ -92,6 +111,12 @@ img {
 .news-text {
   text-align: left;
   font-size: 18px;
+}
+
+.pickup-text {
+  text-align: center;
+  font-size: 18px;
+  color: #00AACD;
 }
 
 .dark {
