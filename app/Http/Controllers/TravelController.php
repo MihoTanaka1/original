@@ -35,6 +35,7 @@ class TravelController extends Controller
       
       return redirect('travel/create');
   }
+  
   public function index(Request $request)
   {
       $cond_title = $request->cond_title;
@@ -46,5 +47,40 @@ class TravelController extends Controller
           $posts = Travel::all();
       }
       return view('travel.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+    }
+public function edit(Request $request)
+  {
+      // News Modelからデータを取得する
+      $travel = Travel::find($request->id);
+      if (empty($travel)) {
+        abort(404);    
+      }
+      return view('travel.edit', ['travel_form' => $travel]);
   }
+
+  public function update(Request $request)
+  {
+      // Validationをかける
+      $this->validate($request, Travel::$rules);
+      // News Modelからデータを取得する
+      $travel = Travel::find($request->id);
+      // 送信されてきたフォームデータを格納する
+      $travel_form = $request->all();
+      if ($request->remove == 'true') {
+          $travel_form['image'] = null;
+      } elseif ($request->file('image')) {
+          $path = $request->file('image')->store('public/image');
+          $travel_form['image'] = basename($path);
+      } else {
+          $travel_form['image'] = $photo->image_path;
+      }
+
+      unset($travel_form['image']);
+      unset($travel_form['remove']);
+      unset($travel_form['_token']);
+      // 該当するデータを上書きして保存する
+      $travel->fill($travel_form)->save();
+      return redirect('travel');
+  }    
+
 }

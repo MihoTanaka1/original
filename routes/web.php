@@ -29,11 +29,10 @@ Route::group(['prefix' => 'photo'], function() {
      Route::post('/create', 'PhotoController@create');
 });
 
-Route::group(['prefix' => 'travel'], function() {
-    Route::get('/index', 'TravelController@index'); 
-});
-
 Route::group(['prefix' => 'travel', 'middleware' => 'auth'], function() {
      Route::get('/create', 'TravelController@add');
      Route::post('/create', 'TravelController@create');
+     Route::get('/index', 'TravelController@index'); 
+     Route::get('/edit', 'TravelController@edit')->middleware('auth');
+     Route::post('/edit', 'TravelController@update')->middleware('auth'); 
 });
