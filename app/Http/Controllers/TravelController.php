@@ -80,7 +80,7 @@ public function edit(Request $request)
       unset($travel_form['_token']);
       // 該当するデータを上書きして保存する
       $travel->fill($travel_form)->save();
-      return redirect('travel');
+      return redirect('travel/index');
   }    
 
 }

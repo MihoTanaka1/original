@@ -71,10 +71,10 @@
 					<a href="AA">
 						<div class="image-list">
 							<div class="pick-list-bg"></div>
-							<img src="image/大曲花火.jpg">
+							<img src="image/青い池.jfif">
 						</div>
 						<div class="text-list">
-							<p class="pickup-text">大曲花火大会</p>
+							<p class="pickup-text">青い池</p>
 						</div>
 					</a>
 				</div>
@@ -82,10 +82,10 @@
 					<a href="AA">
 						<div class="image-list">
 							<div class="pick-list-bg"></div>
-							<img src="image/青い池.jfif">
+							<img src="image/大曲花火.jpg">
 						</div>
 						<div class="text-list">
-							<p class="pickup-text">立山</p>
+							<p class="pickup-text">大曲花火大会</p>
 						</div>
 					</a>
 				</div>

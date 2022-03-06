@@ -21,11 +21,11 @@ class PhotoController extends Controller {
      $photo = new Photo;
      $form = $request->all();
     // フォームから画像が送信されてきたら、保存して、$news->image_path に画像のパスを保存する
-      if (isset($form['photo'])) {
-        $path = $request->file('photo')->store('public/image');
-        $photo->image_path = basename($path);
+      if (isset($form['image'])) {
+        $path = $request->file('image')->store('public/image');
+        $photo->photo = basename($path);
       } else {
-          $photo->image_path = null;
+          $photo->photo = null;
       }
  
       // フォームから送信されてきた_tokenを削除する
