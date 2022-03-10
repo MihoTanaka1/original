@@ -82,7 +82,7 @@
 					<a href="AA">
 						<div class="image-list">
 							<div class="pick-list-bg"></div>
-							<img src="image/大曲花火.jpg">
+							<img src="image/松本城.jpg">
 						</div>
 						<div class="text-list">
 							<p class="pickup-text">大曲花火大会</p>

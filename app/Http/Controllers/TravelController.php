@@ -7,10 +7,15 @@ use App\Http\Controllers\Controller;
 
 class TravelController extends Controller
 {
+
     public function add(){
        return view('travel.create');
     }
-
+    
+    public function list(){
+       return view('travel.list');
+    }
+ 
   public function create(Request $request)
   {
      $this->validate($request,Travel::$rules);    

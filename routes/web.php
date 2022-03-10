@@ -33,6 +33,8 @@ Route::group(['prefix' => 'travel', 'middleware' => 'auth'], function() {
      Route::get('/create', 'TravelController@add');
      Route::post('/create', 'TravelController@create');
      Route::get('/index', 'TravelController@index'); 
-     Route::get('/edit', 'TravelController@edit')->middleware('auth');
-     Route::post('/edit', 'TravelController@update')->middleware('auth'); 
+     Route::get('/edit', 'TravelController@edit');
+     Route::post('/edit', 'TravelController@update'); 
 });
+
+Route::get('/travel/list', 'TravelController@list');

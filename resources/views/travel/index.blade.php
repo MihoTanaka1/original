@@ -31,10 +31,9 @@
                     <table class="table table-light">
                         <thead>
                             <tr>
-                                <th width="5%">ID</th>
+                                <th width="10%">ID</th>
                                 <th width="20%">タイトル</th>
-                                <th width="45%">本文</th>
-                                <th width="20%">写真</th>
+                                <th width="40%">本文</th>
                                 <th width="10%">操作</th>
                             </tr>
                         </thead>
@@ -44,7 +43,6 @@
                                     <th>{{ $travel->id }}</th>
                                     <td>{{ \Str::limit($travel->title, 100) }}</td>
                                     <td>{{ \Str::limit($travel->body, 250) }}</td>
-                                    <td>{{ \Str::limit($travel->photo, 50) }}</td>
                                     <td>
                                         <div>
                                             <a href="{{ action('TravelController@edit', ['id' => $travel->id]) }}">編集</a>
