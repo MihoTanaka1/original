@@ -24,15 +24,15 @@
                     <div class="form-group row">
                         <label class="col-md-2">地域</label>
                         <div class="col-md-10">
-                            <label><input type="radio" class="radio" name="place" value="1">北海道</label>
-                            <label><input type="radio" class="radio" name="place" value="2">東北</label>
-                            <label><input type="radio" class="radio" name="place" value="3">関東</label>
-                            <label><input type="radio" class="radio" name="place" value="4">中部</label>
-                            <label><input type="radio" class="radio" name="place" value="5">関西</label>
-                            <label><input type="radio" class="radio" name="place" value="6">中国</label>
-                            <label><input type="radio" class="radio" name="place" value="7">四国</label>
-                            <label><input type="radio" class="radio" name="place" value="8">九州</label>
-                            <label><input type="radio" class="radio" name="place" value="9">沖縄</label>
+                            <label><input type="radio" class="radio" name="place" value="北海道">北海道</label>
+                            <label><input type="radio" class="radio" name="place" value="東北">東北</label>
+                            <label><input type="radio" class="radio" name="place" value="関東">関東</label>
+                            <label><input type="radio" class="radio" name="place" value="中部">中部</label>
+                            <label><input type="radio" class="radio" name="place" value="関西">関西</label>
+                            <label><input type="radio" class="radio" name="place" value="中国">中国</label>
+                            <label><input type="radio" class="radio" name="place" value="四国">四国</label>
+                            <label><input type="radio" class="radio" name="place" value="8九州">九州</label>
+                            <label><input type="radio" class="radio" name="place" value="沖縄">沖縄</label>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -44,41 +44,41 @@
                     <div class="form-group row">
                         <label class="col-md-2">予算</label>
                         <div class="col-md-10">
-                            <label><input type="radio" class="radio" name="yosan" value="1">～1万円</label>
-                            <label><input type="radio" class="radio" name="yosan" value="5">1～5万円</label>
-                            <label><input type="radio" class="radio" name="yosan" value="10">5～10万円</label>
-                            <label><input type="radio" class="radio" name="yosan" value="15">10～15万円</label>
-                            <label><input type="radio" class="radio" name="yosan" value="16">15万円～</label>
+                            <label><input type="radio" class="radio" name="yosan" value="1万円以下">1万円以下</label>
+                            <label><input type="radio" class="radio" name="yosan" value="1～5万円">1～5万円</label>
+                            <label><input type="radio" class="radio" name="yosan" value="5～10万円">5～10万円</label>
+                            <label><input type="radio" class="radio" name="yosan" value="10～15万円">10～15万円</label>
+                            <label><input type="radio" class="radio" name="yosan" value="15万円以上">15万円～</label>
                         </div>
                     </div>
                      <div class="form-group row">
                         <label class="col-md-2">期間</label>
                         <div class="col-md-10">
-                            <label><input type="radio" class="radio" name="kikan" value="1">日帰り</label>
-                            <label><input type="radio" class="radio" name="kikan" value="2">1泊2日</label>
-                            <label><input type="radio" class="radio" name="kikan" value="3">2泊3日</label>
-                            <label><input type="radio" class="radio" name="kikan" value="4">3泊4日</label>
-                            <label><input type="radio" class="radio" name="kikan" value="5">4泊5日</label>
-                            <label><input type="radio" class="radio" name="kikan" value="6">5泊以上</label>
+                            <label><input type="radio" class="radio" name="kikan" value="日帰り">日帰り</label>
+                            <label><input type="radio" class="radio" name="kikan" value="1泊2日">1泊2日</label>
+                            <label><input type="radio" class="radio" name="kikan" value="2泊3日">2泊3日</label>
+                            <label><input type="radio" class="radio" name="kikan" value="3泊4日">3泊4日</label>
+                            <label><input type="radio" class="radio" name="kikan" value="4泊5日">4泊5日</label>
+                            <label><input type="radio" class="radio" name="kikan" value="５泊以上">5泊以上</label>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2">人数</label>
                         <div class="col-md-10">
-                            <label><input type="radio" class="radio" name="ninnzuu" value="1">1人</label>
-                            <label><input type="radio" class="radio" name="ninnzuu" value="2">2人</label>
-                            <label><input type="radio" class="radio" name="ninnzuu" value="3">3人</label>
-                            <label><input type="radio" class="radio" name="ninnzuu" value="4">4人</label>
-                            <label><input type="radio" class="radio" name="ninnzuu" value="5">5人以上</label>
+                            <label><input type="radio" class="radio" name="ninnzuu" value="1人">1人</label>
+                            <label><input type="radio" class="radio" name="ninnzuu" value="2人">2人</label>
+                            <label><input type="radio" class="radio" name="ninnzuu" value="3人">3人</label>
+                            <label><input type="radio" class="radio" name="ninnzuu" value="4人">4人</label>
+                            <label><input type="radio" class="radio" name="ninnzuu" value="5人以上">5人以上</label>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2">カテゴリー</label>
                         <div class="col-md-10">
-                            <label><input type="radio" class="radio" name="category" value="1">1人旅</label>
-                            <label><input type="radio" class="radio" name="category" value="2">友達</label>
-                            <label><input type="radio" class="radio" name="category" value="3">家族</label>
-                            <label><input type="radio" class="radio" name="category" value="4">カップル</label>
+                            <label><input type="radio" class="radio" name="category" value="1人旅">1人旅</label>
+                            <label><input type="radio" class="radio" name="category" value="友達">友達</label>
+                            <label><input type="radio" class="radio" name="category" value="家族">家族</label>
+                            <label><input type="radio" class="radio" name="category" value="カップル">カップル</label>
                         </div>
                     </div>
                     <div class="form-group row">

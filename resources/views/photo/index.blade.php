@@ -1,7 +1,9 @@
 @include("parts.header")
-<main>
-</main>
-	<div class="card-contents mycontainer">
+@section('title', '絶景一覧')
+
+@section('content')
+    <div class="mycontainer">
+		<div class="card-contents mycontainer">
 			<div class="photo-list-area">
 				<div class="photo-list-wrap">
 					<div class="photo-list-img">
@@ -35,5 +37,5 @@
 				</div>
 			</div>
 		</div>
-
+	</div>
 @include("parts.footer")

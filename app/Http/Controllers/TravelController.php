@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Travel;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
+use App\History;
 
 class TravelController extends Controller
 {
@@ -64,28 +66,40 @@ public function edit(Request $request)
   }
 
   public function update(Request $request)
-  {
-      // Validationをかける
-      $this->validate($request, Travel::$rules);
-      // News Modelからデータを取得する
-      $travel = Travel::find($request->id);
-      // 送信されてきたフォームデータを格納する
-      $travel_form = $request->all();
-      if ($request->remove == 'true') {
-          $travel_form['image'] = null;
-      } elseif ($request->file('image')) {
-          $path = $request->file('image')->store('public/image');
-          $travel_form['image'] = basename($path);
-      } else {
-          $travel_form['image'] = $photo->image_path;
-      }
+    {
+        $this->validate($request, Travel::$rules);
+        $travel= Travel::find($request->id);
+        $travel_form = $request->all();
+        if ($request->remove == 'true') {
+            $travel_form['image_path'] = null;
+        } elseif ($request->file('image')) {
+            $path = $request->file('image')->store('public/image');
+            $travel_form['image_path'] = basename($path);
+        } else {
+            $travel_form['image_path'] = $travel->image_path;
+        }
 
-      unset($travel_form['image']);
-      unset($travel_form['remove']);
-      unset($travel_form['_token']);
-      // 該当するデータを上書きして保存する
-      $travel->fill($travel_form)->save();
-      return redirect('travel/index');
-  }    
+        unset($travel_form['_token']);
+        unset($travel_form['image']);
+        unset($travel_form['remove']);
+        $travel->fill($travel_form)->save();
+
+        // 以下を追記
+        $history = new History();
+        $history->travel_id = $travel->id;
+        $history->edited_at = Carbon::now();
+        $history->save();
+
+        return redirect('travel/index');
+    }
+
+ public function delete(Request $request)
+  {
+      // 該当するNews Modelを取得
+      $travel = Travel::find($request->id);
+      // 削除する
+      $travel->delete();
+      return redirect('travel/index/');
+  }  
 
 }

@@ -35,6 +35,9 @@ Route::group(['prefix' => 'travel', 'middleware' => 'auth'], function() {
      Route::get('/index', 'TravelController@index'); 
      Route::get('/edit', 'TravelController@edit');
      Route::post('/edit', 'TravelController@update'); 
+     Route::get('/delete', 'TravelController@delete'); 
 });
 
-Route::get('/travel/list', 'TravelController@list');
+Route::get('/travel/list', 'TravelListController@index');
+
+Route::get('travel/list/{info_id}', 'TravelListController@show')->name("travel.show");

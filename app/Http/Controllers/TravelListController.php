@@ -17,8 +17,13 @@ class TravelListController extends Controller
             $headline = null;
         }
 
-        // news/index.blade.php ファイルを渡している
         // また View テンプレートに headline、 posts、という変数を渡している
-        return view('travel.index', ['headline' => $headline, 'posts' => $posts]);
+        return view('travel.list', ['headline' => $headline, 'posts' => $posts]);
+    }
+    
+    public function show($id)
+    {
+        $info = Travel::find($id);
+        return view('travel/show',['travel_form' => $info]);
     }
 }

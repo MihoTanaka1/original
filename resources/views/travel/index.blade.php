@@ -47,6 +47,9 @@
                                         <div>
                                             <a href="{{ action('TravelController@edit', ['id' => $travel->id]) }}">編集</a>
                                         </div>
+                                        <div>
+                                            <a href="{{ action('TravelController@delete', ['id' => $travel->id]) }}">削除</a>
+                                        </div>
                                     </td>
                                 </tr>
                             @endforeach

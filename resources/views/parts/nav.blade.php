@@ -9,7 +9,7 @@
                 <div class="logo">
                     <a href="/"><img src="../../image/logo.jpg" alt="ロゴ"></a>
                 </div>
-            	<li class="mr-5"><a class="dark" href="{{ url('/travel/index') }}">投稿一覧</a></li>
+            	<li class="mr-5"><a class="dark" href="{{ url('/travel/list') }}">投稿一覧</a></li>
             	<li><a class="dark" href="{{ url('/photo/index') }}">絶景写真</a></li>
             </ul>
             <!-- Right Side Of Navbar -->
