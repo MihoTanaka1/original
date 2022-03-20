@@ -11,6 +11,6 @@ class Photo extends Model
 
     public static $rules = array(
         'Placename' => 'required',
-        'photo' => 'required',
+        'image' => 'required',
     );
 }

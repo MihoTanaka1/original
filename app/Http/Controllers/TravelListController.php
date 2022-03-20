@@ -18,6 +18,6 @@ class TravelListController extends Controller
     public function show($id)
     {
         $info = Travel::find($id);
-        return view('travel/show',['travel_form' => $info]);
+        return view('travel.show',['travel_form' => $info]);
     }
 }

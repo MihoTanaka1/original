@@ -3,10 +3,11 @@
 
 @section('content')
     <div class="mycontainer">
-                            @if ($post->image_path)
-                                <img src="{{ asset('storage/image/' . $post->image_path) }}">
-                            @endif
-
+        <div class="travel-photo">
+            @if ($travel_form->image_path)
+                <img src="{{ asset('storage/image/' . $travel_form->image_path) }}">
+            @endif
+        </div>
             <div class="col-md-8 mx-auto">
                     <div class="form-group row">
                         <div class="col-md-10">

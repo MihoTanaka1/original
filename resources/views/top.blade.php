@@ -12,45 +12,23 @@
 		</div>
 		<div class="card-contents">
 			<div class="list-area">
-				<div class="list">
-					<a href="AA">
-						<div class="image-list">
-							<div class="image-list-bg"></div>
-							<img src="image/写真1.JPG">
-						</div>
-						<div class="text-list">
-							<p class="photo-title">2021.11.4</p>
-							<p class="news-text">長野</p>
-						</div>
-					</a>
-				</div>
-				<div class="list">
-					<a href="AA">
-						<div class="image-list">
-							<div class="image-list-bg"></div>
-							<img src="image/写真2.JPG">
-						</div>
-						<div class="text-list">
-							<p class="photo-title">202.114</p>
-							<p class="news-text">石垣島</p>
-						</div>
-					</a>
-				</div>
-				<div class="list">
-					<a href="AA">
-						<div class="image-list">
-							<div class="image-list-bg"></div>
-							<img src="image/写真3.jpg">
-						</div>
-						<div class="text-list">
-							<p class="photo-title">2020.8.11</p>
-							<p class="news-text">立山</p>
-						</div>
-					</a>
-				</div>
+				@for($i = 0; $i < 3; $i++)
+                    <div class="list">
+                        <a href="{{route('travel.show', ['info_id' => $post[$i]->id] )}}">
+                            <div class="image-list">
+                                <div class="image-list-bg"></div>
+                                @if ($post[$i]->image_path)
+                                    <img src="{{ asset('storage/image/' . $post[$i]->image_path) }}">
+                                @endif
+                            </div>
+							<div class="text-list">
+								<p class="travel-title"> {{ str_limit($post[$i]->title, 20) }}</p>
+								<p class="travel-text"> 地域：{{ str_limit($post[$i]->place, 10) }}</p>
+							</div>
+                        </a>
+                    </div>
+                @endfor
 			</div>
-		</div>
-				<div>
 			<div class="pickup">PICK UP</div>
 			<div class="news-bottom">ピックアップ</div>
 		</div>

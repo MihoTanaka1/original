@@ -28,9 +28,9 @@ class PhotoController extends Controller {
     // フォームから画像が送信されてきたら、保存して、$photo->image_path に画像のパスを保存する
       if (isset($form['image'])) {
         $path = $request->file('image')->store('public/image');
-        $photo->image_path = basename($path);
+        $photo->photo = basename($path);
       } else {
-        $photo->image_path = null;
+        $photo->photo = null;
       }
  
       // フォームから送信されてきた_tokenを削除する
@@ -78,4 +78,10 @@ class PhotoController extends Controller {
       $photo->fill($photo_form)->save();
       return redirect('photo');
   }
+  
+  public function show($id)
+    {
+        $info = Photo::find($id);
+        return view('photo.show',['photo_form' => $info]);
+    }
 }

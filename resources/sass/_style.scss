@@ -65,10 +65,14 @@ img {
 
 .list-area {
   display:flex;
-  justify-content:space-between;
+  flex-wrap: wrap;
   .list {
     width: 30% ;
-    margin-top:50px;
+    margin-right:5%;
+    margin-bottom:50px;
+    &:nth-child(3n){
+      margin-right:0;
+    }
     a{
       color:#333;
     }
@@ -78,6 +82,12 @@ img {
 .image-list {
   margin-bottom: 10px;
   position:relative;
+  height:360px;
+  overflow:hidden;
+  img{
+    width:auto;
+    height:100%;
+  }
 }
 
 .image-list-bg{

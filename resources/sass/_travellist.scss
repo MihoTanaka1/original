@@ -1,3 +1,8 @@
+.travel-photo {
+  width:1000px;
+  height:666px;
+}
+
 .image-list-bg-travel{
   background:url(../image/bg-grid.png) no-repeat left top;
   background-size:100% 100%;
@@ -28,4 +33,5 @@
 
 .show-text {
   font-size:18px;
+  white-space: pre-wrap;
 }
