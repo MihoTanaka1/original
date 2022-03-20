@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="{{  asset('css/style.css') }}" />
-    </head>
-    <body>
-        @include("parts.header")
-        <main>
-    	    <h1>マイページ</h1>
-    	    
-    	        <a href="/travel/create">投稿作成</a>
-    	        <a href="/admin/profile">プロフィール</a>
-        </main>
-        @include("parts.footer")
-    </body>
-</html>
+@extends('layouts.admin')
+@section('title', 'マイページ')
+
+@section('content')
+    <div class="container">
+        <h3>マイページ</h3>
+        
+        <a href="/travel/index">作成日記一覧</a>
+        <a href="/admin/profile">プロフィール</a>
+        
+        <h4 class="mypage-text-title">日記作成数</h4>
+    </div>
+@endsection

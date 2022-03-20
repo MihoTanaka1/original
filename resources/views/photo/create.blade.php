@@ -2,7 +2,7 @@
 @section('title', '絶景写真の投稿')
 
 @section('content')
-    <div class="container">
+    <div class="mycontainer">
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h2>絶景写真の投稿</h2>

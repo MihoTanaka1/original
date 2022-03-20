@@ -41,3 +41,4 @@ Route::group(['prefix' => 'travel', 'middleware' => 'auth'], function() {
 Route::get('/travel/list', 'TravelListController@index');
 
 Route::get('travel/list/{info_id}', 'TravelListController@show')->name("travel.show");
+Route::post('travel/list/{info_id}', 'TravelListController@show')->name("travel.show");

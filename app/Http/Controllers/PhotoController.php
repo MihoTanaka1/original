@@ -4,10 +4,15 @@ use Illuminate\Http\Request;
 use App\Photo;
 use App\Http\Controllers\Controller;
 
+
 class PhotoController extends Controller {
 
-    public function index(){
-       return view('photo.index');
+       public function index(Request $request)
+    {
+        $posts = Photo::all()->sortByDesc('updated_at');
+
+        // また View テンプレートに headline、 posts、という変数を渡している
+        return view('photo.index', [ 'posts' => $posts]);
     }
 	
 	  public function add()
@@ -20,12 +25,12 @@ class PhotoController extends Controller {
      $this->validate($request,Photo::$rules);    
      $photo = new Photo;
      $form = $request->all();
-    // フォームから画像が送信されてきたら、保存して、$news->image_path に画像のパスを保存する
+    // フォームから画像が送信されてきたら、保存して、$photo->image_path に画像のパスを保存する
       if (isset($form['image'])) {
         $path = $request->file('image')->store('public/image');
-        $photo->photo = basename($path);
+        $photo->image_path = basename($path);
       } else {
-          $photo->photo = null;
+        $photo->image_path = null;
       }
  
       // フォームから送信されてきた_tokenを削除する

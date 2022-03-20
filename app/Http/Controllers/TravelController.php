@@ -23,7 +23,7 @@ class TravelController extends Controller
      $this->validate($request,Travel::$rules);    
      $travel = new Travel;
      $form = $request->all();
-      // フォームから画像が送信されてきたら、保存して、$news->image_path に画像のパスを保存する
+      // フォームから画像が送信されてきたら、保存して、$travel->image_path に画像のパスを保存する
       if (isset($form['image'])) {
         $path = $request->file('image')->store('public/image');
         $travel->image_path = basename($path);

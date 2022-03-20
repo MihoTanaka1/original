@@ -11,14 +11,8 @@ class TravelListController extends Controller
     {
         $posts = Travel::all()->sortByDesc('updated_at');
 
-        if (count($posts) > 0) {
-            $headline = $posts->shift();
-        } else {
-            $headline = null;
-        }
-
-        // また View テンプレートに headline、 posts、という変数を渡している
-        return view('travel.list', ['headline' => $headline, 'posts' => $posts]);
+        // また View テンプレートに  posts、という変数を渡している
+        return view('travel.list', [ 'posts' => $posts]);
     }
     
     public function show($id)

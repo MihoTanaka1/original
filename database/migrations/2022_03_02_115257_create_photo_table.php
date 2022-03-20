@@ -15,8 +15,8 @@ class CreatePhotoTable extends Migration
     {
         Schema::create('photo', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('Placename')->nullable();  // 写真の地名
-            $table->string('photo')->nullable();  // 画像のパスを保存するカラム
+            $table->string('Placename');  // 写真の地名
+            $table->string('photo');  // 画像のパスを保存するカラム
             $table->timestamps();
         });
     }
