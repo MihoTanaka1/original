@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 img {
   width: 100%;
 }
@@ -161,6 +163,16 @@ img {
   font-size: 20px;
 }
 
+.image-list-bg-photo {
+  width: 480px;
+  height: 360px;
+}
+
+.photo-list {
+  width: 300px;
+  height: 250px;
+}
+
 .photo-list-area {
   display: flex;
   justify-content: space-between;
@@ -186,9 +198,20 @@ img {
   font-size: 15px;
 }
 
-.travel-photo {
-  width: 1000px;
-  height: 666px;
+.left-contents {
+  width: 40%;
+  float: left;
+}
+
+.right-contents {
+  width: 60%;
+  float: left;
+}
+
+.show-title2 {
+  width: 100px;
+  font-size: 20px;
+  background: linear-gradient(transparent 80%, #ffe4e1 70%);
 }
 
 .image-list-bg-travel {
@@ -221,6 +244,16 @@ img {
 .show-text {
   font-size: 18px;
   white-space: pre-wrap;
+  background-color: #fff;
+  /* 背景色 */
+  background-image: linear-gradient(90deg, transparent 0%, transparent 50%, #fff 50%, #fff 100%), linear-gradient(180deg, #ccc 1px, transparent 1px);
+  /* 点線2の色と太さ */
+  background-size: 8px 100%, 100% 2.5em;
+  /* 点線2のサイズ */
+  line-height: 2.5em;
+  /* 文字の高さ */
+  padding-bottom: 1px;
+  /* 最終行の下にも罫線を引く */
 }
 
 .mypage-text-title {

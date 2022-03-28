@@ -11,10 +11,10 @@ class PhotoController extends Controller {
     {
         $posts = Photo::all()->sortByDesc('updated_at');
 
-        // また View テンプレートに headline、 posts、という変数を渡している
+        // また View テンプレートに  posts、という変数を渡している
         return view('photo.index', [ 'posts' => $posts]);
     }
-	
+
 	  public function add()
   {
       return view('photo/create');

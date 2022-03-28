@@ -8,16 +8,19 @@
         </div>
         
         <div class="list-area">
-            <div class="list">
-                <div class="image-list">
-                    <div class="image-list-phoo"></div>
-                        @if ($photo_form->image_path)
-                            <img src="{{ asset('storage/image/' . $photo_form->image_path) ) }}">
+            @foreach($posts as $post)
+                <div class="list">
+                    <div class="image-list">
+                        <div class="image-list-bg-photo"></div>
+                        @if ($post->image_path)
+                            <img src="{{ asset('storage/image/' . $post->image_path) }}">
                         @endif
+                    </div>
+                    <div class="text-list">
+                        <p class="travel-text"> 地域：{{$post->place}}</p>
+                    </div>
                 </div>
-                <div class="text-list">
-                    <p class="photo-text"> {{ $photo_form->placename }}</p>
-                </div>
+            @endforeach
         </div>
     </div>
 @endsection
