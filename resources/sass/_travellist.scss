@@ -11,7 +11,18 @@
 .show-title2{
   width:100px;
   font-size:20px;
-  background: linear-gradient(transparent 80%, #ffe4e1 70%);
+  position:relative;
+  &:after{
+    content:"";
+    display:block;
+    width:100px;
+    height:12px;
+    position:absolute;
+    left:0;
+    top:19px;
+    background:#ffe4e1;
+    z-index:-1;
+  }
 }
 
 .image-list-bg-travel{

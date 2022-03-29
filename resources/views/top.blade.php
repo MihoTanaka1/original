@@ -32,6 +32,21 @@
 			<div class="pickup">PICK UP</div>
 			<div class="news-bottom">ピックアップ</div>
 		</div>
+					<div class="list-area">
+				@for($i = 0; $i < 3; $i++)
+                    <div class="list">
+                            <div class="image-list">
+                                <div class="image-list-bg"></div>
+                                @if ($post[$i]->image_path)
+                                    <img src="{{ asset('storage/image/' . $photos[$i]->photo) }}">
+                                @endif
+                            </div>
+							<div class="text-list">
+								<p class="travel-text"> 地域：{{ str_limit($photos[$i]->Placename, 10) }}</p>
+							</div>
+                    </div>
+                @endfor
+			</div>
 		<div class="card-contents">
 			<div class="list-area">
 				<div class="list">
