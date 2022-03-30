@@ -16,7 +16,7 @@
                         @endif
                     </div>
                     <div class="text-list">
-                        <p class="travel-text"> 地域：{{$post->Placename}}</p>
+                        <p class="travel-text"> 地名：{{$post->Placename}}</p>
                     </div>
                 </div>
             @endforeach

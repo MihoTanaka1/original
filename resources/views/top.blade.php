@@ -36,54 +36,17 @@
 				@for($i = 0; $i < 3; $i++)
                     <div class="list">
                             <div class="image-list">
-                                <div class="image-list-bg"></div>
+                                <div class="pick-list-bg"></div>
                                 @if ($post[$i]->image_path)
                                     <img src="{{ asset('storage/image/' . $photos[$i]->photo) }}">
                                 @endif
                             </div>
 							<div class="text-list">
-								<p class="travel-text"> 地域：{{ str_limit($photos[$i]->Placename, 10) }}</p>
+								<p class="pickup-text"> {{ str_limit($photos[$i]->Placename, 20) }}</p>
 							</div>
                     </div>
                 @endfor
 			</div>
-		<div class="card-contents">
-			<div class="list-area">
-				<div class="list">
-					<a href="AA">
-						<div class="image-list">
-							<div class="pick-list-bg"></div>
-							<img src="image/屋久島.jpg">
-						</div>
-						<div class="text-list">
-							<p class="pickup-text">屋久島</p>
-						</div>
-					</a>
-				</div>
-				<div class="list">
-					<a href="AA">
-						<div class="image-list">
-							<div class="pick-list-bg"></div>
-							<img src="image/青い池.jfif">
-						</div>
-						<div class="text-list">
-							<p class="pickup-text">青い池</p>
-						</div>
-					</a>
-				</div>
-				<div class="list">
-					<a href="AA">
-						<div class="image-list">
-							<div class="pick-list-bg"></div>
-							<img src="image/松本城.jpg">
-						</div>
-						<div class="text-list">
-							<p class="pickup-text">大曲花火大会</p>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
 	</div>
 
 
