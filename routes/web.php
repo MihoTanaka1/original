@@ -21,7 +21,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
      Route::get('/mypage', 'MypageController@index');
      Route::get('/profile', 'MypageController@profile');
+     Route::post('/profile', 'ProfileController@index');
+     Route::get('/profile-create', 'ProfileController@add');
+     Route::post('/profile-create', 'ProfileController@create');
 });
+
 
 Route::group(['prefix' => 'photo'], function() {
      Route::get('/index', 'PhotoController@index');

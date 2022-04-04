@@ -153,6 +153,8 @@ return [
         'ninnzuu' => '人数',
         'category' => 'カテゴリー',
         'Placename' => '地名',
-        'photo' => '写真'
+        'photo' => '写真',
+        'name' => '名前',
+        'e-mail' => 'メールアドレス'
         ],
     ];

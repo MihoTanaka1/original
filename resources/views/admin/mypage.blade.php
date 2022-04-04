@@ -2,9 +2,9 @@
 @section('title', 'マイページ')
 
 @section('content')
-    <div class="container">
+    <div class="mycontainer">
 
-            <a href="/admin/profile"><p class="mymenu">プロフィール</p></a>
+            <a href={{ url('/admin/profile') }}><p class="mymenu">プロフィール</p></a>
             
             <h4 class="mypage-text-title">日記作成数</h4>
                     <div class="row">
