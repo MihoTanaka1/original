@@ -16,10 +16,10 @@ class CreateProfileTable extends Migration
         Schema::create('profile', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name'); //名前
-            $table->string('gender'); // 性別
-            $table->string('age'); // 年齢
-            $table->string('introduction');  // 自己紹介
-            $table->string('profile_image_path');//プロフィール写真
+            $table->string('gender')->nullable(); // 性別
+            $table->string('age')->nullable(); // 年齢
+            $table->string('introduction')->nullable();  // 自己紹介
+            $table->string('image_path')->nullable();//プロフィール写真
             $table->timestamps();
         });
     }

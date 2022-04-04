@@ -5,7 +5,7 @@
     <div class="mycontainer">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2>プロフィール編集</h2>
+                <h2>プロフィール新規作成</h2>
                 <form action="{{ action('ProfileController@create') }}" method="post" enctype="multipart/form-data">
 
                     @if (count($errors) > 0)
@@ -22,15 +22,33 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">メールアドレス</label>
+                        <label class="col-md-2">性別</label>
                         <div class="col-md-5">
-                            <input type="text" class="form-control" name="e-mail" value="{{ old('e-mail') }}">
+                            <label><input type="radio" class="radio" name="gender" value="male">男性</label>
+                            <label><input type="radio" class="radio" name="gender" value="female">女性</label>
                         </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2">年齢</label>
+                        <div class="col-md-5">
+                            <label><input type="radio" class="radio" name="age" value="10">10代</label>
+                            <label><input type="radio" class="radio" name="age" value="20">20代</label>
+                            <label><input type="radio" class="radio" name="age" value="30">30代</label>
+                            <label><input type="radio" class="radio" name="age" value="40">40代</label>
+                            <label><input type="radio" class="radio" name="age" value="50">50代</label>
+                            <label><input type="radio" class="radio" name="age" value="50代以上">50代以上</label>
+                        </div>
+                    </div>
+                        <div class="form-group row">
+                        <label class="col-md-2">自己紹介</label>
+                        <div class="col-md-5">
+                            <textarea class="form-control" name="introduction" rows="5">{{ old('introduction') }}</textarea>
+                        </div> 
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2">画像</label>
                         <div class="col-md-10">
-                            <input type="file" class="form-control-file" name="image_path">
+                            <input type="file" class="form-control-file" name="image">
                         </div>
                     </div>
                     {{ csrf_field() }}

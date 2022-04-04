@@ -6,7 +6,7 @@
 
             <a href={{ url('/admin/profile') }}><p class="mymenu">プロフィール</p></a>
             
-            <h4 class="mypage-text-title">日記作成数</h4>
+            <h4 class="mypage-text-title">日記作成数：{{ count($posts) }}</h4>
                     <div class="row">
             <div class="col-md-4">
                 <a href="{{ action('TravelController@add') }}" role="button" class="btn btn-primary">新規作成</a>
