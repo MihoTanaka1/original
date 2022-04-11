@@ -29,8 +29,8 @@
                     </div>
                 @endfor
 			</div>
-			<div class="pickup">PICK UP</div>
-			<div class="news-bottom">ピックアップ</div>
+			<div class="pickup">Superb view</div>
+			<div class="news-bottom">絶景写真</div>
 		</div>
 					<div class="list-area">
 				@for($i = 0; $i < 3; $i++)

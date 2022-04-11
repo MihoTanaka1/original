@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Profile;
+use App\User;
 
 class ProfileController extends Controller {
 
@@ -13,7 +14,7 @@ class ProfileController extends Controller {
     }
     
     public function index(){
-       return view('profile');
+       return view('admin.profile-create');
     }
     
      public function create(Request $request)
@@ -38,7 +39,14 @@ class ProfileController extends Controller {
       $profile->fill($form);
       $profile->save();
       
-      return redirect('profile/profile-create');
+      return redirect('admin/profile-create');
   }
+
+    public function ProfileShow(Request $request)
+    {
+        $profile = $request->user()->profile;
+    
+        return view('admin.show',['profile_form'=>$profile]);
+    }
 
 }

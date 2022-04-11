@@ -24,6 +24,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
      Route::post('/profile', 'ProfileController@index');
      Route::get('/profile-create', 'ProfileController@add');
      Route::post('/profile-create', 'ProfileController@create');
+     Route::get('/profile/{user_id}', 'ProfileController@ProfileShow')->name("profile.show");
 });
 
 
@@ -45,4 +46,4 @@ Route::group(['prefix' => 'travel', 'middleware' => 'auth'], function() {
 Route::get('/travel/list', 'TravelListController@index');
 
 Route::get('travel/list/{info_id}', 'TravelListController@show')->name("travel.show");
-Route::get('phoo/index/{info_id}', 'PhotoController@show')->name("photo.show");
+Route::get('photo/index/{info_id}', 'PhotoController@show')->name("photo.show");
