@@ -15,6 +15,8 @@ class CreatePhotoTable extends Migration
     {
         Schema::create('photo', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('user_id')->nullable()->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('Placename');  // 写真の地名
             $table->string('photo');  // 画像のパスを保存するカラム
             $table->timestamps();

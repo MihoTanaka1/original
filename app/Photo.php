@@ -13,4 +13,8 @@ class Photo extends Model
         'Placename' => 'required',
         'image' => 'required',
     );
+    
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }

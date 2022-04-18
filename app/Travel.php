@@ -19,4 +19,8 @@ class Travel extends Model
         'image' => 'required',
     );
     
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
+    
 }

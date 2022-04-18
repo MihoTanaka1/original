@@ -39,7 +39,16 @@ class User extends Authenticatable
     
     public function profile()
     {
-        
-        return $this->id . ': ' . $this->title . ' (' . optional($this->Profile)->name . ')';
+        return $this->hasOne('App\Profile');
+    }
+    
+    public function travels()
+    {
+        return $this->hasMany('App\Travel');
+    }
+    
+        public function photo()
+    {
+        return $this->hasMany('App\Photo');
     }
 }

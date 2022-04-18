@@ -12,4 +12,8 @@ class Profile extends Model
     public static $rules = array(
         'name' => 'required',
     );
+    
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }

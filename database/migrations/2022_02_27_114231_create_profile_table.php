@@ -15,6 +15,8 @@ class CreateProfileTable extends Migration
     {
         Schema::create('profile', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('user_id')->nullable()->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('name'); //名前
             $table->string('gender')->nullable(); // 性別
             $table->string('age')->nullable(); // 年齢

@@ -9,6 +9,7 @@
         <img src="{{ asset('storage/image/' . $profile_form->image_path) }}">
     @endif
     
+    @if ($profile_form)
     <div class="form-group row">
         <p class="show-title2">名前</p>
         <div class="col-md-10">
@@ -33,4 +34,5 @@
             <p class="show-text">{{$profile_form->introduction}}</p>
         </div>
     </div>
+@endif
 </div>

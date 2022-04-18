@@ -3,8 +3,9 @@
 
 @section('content')
     <div class="mycontainer">
+            <?php $user = Auth::user(); ?>
             <a href={{ route('profile.show', ['user_id' => Auth::user()->id]) }}><p class="mymenu">プロフィール</p></a>
-            <h4 class="mypage-text-title">日記作成数：{{ count($posts) }}</h4>
+            <h4 class="mypage-text-title">日記作成数：{{ count($user->travels) }}</h4>
                     <div class="row">
             <div class="col-md-4">
                 <a href="{{ action('TravelController@add') }}" role="button" class="btn btn-primary">新規作成</a>
@@ -24,10 +25,12 @@
                 </form>
             </div>
         </div>
-        @foreach($posts as $travel)
+        @foreach($user->travels as $travel)
             <div class="mypost-list">
                 <div class="mypost-left">
-                    <div class="mypost-image">{{ $travel->image_path }}</div>
+                    <div class="mypost-image">
+                        <img src="{{ asset('storage/image/' . $travel->image_path) }}">
+                    </div>
                 </div>
                 <div class="mypost-right">
                     <div class="mypost-id">{{ $travel->id }}</div>

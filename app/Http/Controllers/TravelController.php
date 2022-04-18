@@ -31,12 +31,14 @@ class TravelController extends Controller
           $travel->image_path = null;
       }
  
+     $travel->user_id = auth()->id();
+ 
       // フォームから送信されてきた_tokenを削除する
       unset($form['_token']);
       // フォームから送信されてきたimageを削除する
       unset($form['image']);
       
-      // データベースに保存する
+          // データベースに保存する
       $travel->fill($form);
       $travel->save();
       

@@ -33,6 +33,8 @@ class PhotoController extends Controller {
         $photo->photo = null;
       }
  
+      $photo->user_id = auth()->id();
+ 
       // フォームから送信されてきた_tokenを削除する
       unset($form['_token']);
       // フォームから送信されてきたimageを削除する
