@@ -8,25 +8,34 @@
 }
 
 .mypost-list {
+    height:200px;
     border-bottom: 2px dashed #000;
 }
 
 .mypost-left {
-     width:10%;
+    width: 20%;
+    float: left;
 }
 
 .mypost-right {
-     width:90%;
+  width: 80%;
+  float: left;
 }
 
-.mypost-list {
-    height:250px;
+.mypost-image{
+    margin-top:10px;
+    margin-left:70px;
+    width: 180px;
+    height:190px;
 }
-
 .mypost-title {
     font-size:25px;
 }
 
 .mypost-body {
-    margin-bottom:15px;
+    margin-bottom:2px;
+}
+
+.mypost-edit {
+    margin-top:50px;
 }

@@ -25,6 +25,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
      Route::get('/profile-create', 'ProfileController@add');
      Route::post('/profile-create', 'ProfileController@create');
      Route::get('/profile/{user_id}', 'ProfileController@ProfileShow')->name("profile.show");
+     Route::get('/profile-edit', 'ProfileController@edit');
+     Route::post('/profile-edit', 'ProfileController@update');
+     Route::get('/myphoto', 'PhotoController@myphoto');
+     Route::get('/myphoto/edit', 'PhotoController@edit');
+     Route::get('/myphoto/delete', 'PhotoController@delete');
 });
 
 

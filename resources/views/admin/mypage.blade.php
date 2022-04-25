@@ -33,17 +33,17 @@
                     </div>
                 </div>
                 <div class="mypost-right">
-                    <div class="mypost-id">{{ $travel->id }}</div>
                     <div class="mypost-title">{{ \Str::limit($travel->title, 100) }}</div>
                     <div class="mypost-body">{{ \Str::limit($travel->body, 250) }}</div>
-                    <div>
+                    <div class="mypost-body">地域：{{ \Str::limit($travel->place,50) }}</div>
+                    <div class="mypost-body">予算：{{ \Str::limit($travel->yosan,50) }}</div>
+                    <div class="mypost-body">期間：{{ \Str::limit($travel->kikan,50) }}</div>
+                    <div class"mypost-edit">
                         <a href="{{ action('TravelController@edit', ['id' => $travel->id]) }}">編集</a>
                         <a href="{{ action('TravelController@delete', ['id' => $travel->id]) }}">削除</a>
                     </div>
                 </div>
-            </div> 
-        @endforeach     
-
-    
+            </div>
+        @endforeach
     </div>
 @endsection

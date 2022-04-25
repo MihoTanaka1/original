@@ -4,7 +4,7 @@
 @section('content')
 <div class="mycontainer">
     <h1>プロフィール</h1>
-    <a href={{ url('/admin/profile-create') }}><p class="mymenu">新規作成</p></a>
+    <a href={{ action('ProfileController@edit' , ['id' => $profile_form->id]) }}><p class="mymenu">編集</p></a>
     @if ($profile_form->image_path)
         <img src="{{ asset('storage/image/' . $profile_form->image_path) }}">
     @endif

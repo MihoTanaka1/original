@@ -19,7 +19,7 @@ class CreateTravelsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('title'); // 投稿のタイトルを保存するカラム
             $table->text('body');  // 投稿の本文を保存するカラム
-            $table->string('place');
+            $table->string('place');//地域
             $table->string('yosan')->nullable(); // 投稿の予算を保存するカラム
             $table->string('kikan')->nullable(); // 投稿の期間を保存するカラム
             $table->string('ninnzuu')->nullable(); // 投稿の人数を保存するカラム

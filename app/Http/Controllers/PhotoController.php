@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Photo;
+use Carbon\Carbon;
 use App\Http\Controllers\Controller;
 
 
@@ -82,8 +83,22 @@ class PhotoController extends Controller {
   }
   
   public function show($id)
-    {
-        $info = Photo::find($id);
-        return view('photo.show',['photo_form' => $info]);
-    }
+  {
+      $info = Photo::find($id);
+      return view('photo.show',['photo_form' => $info]);
+  }
+    
+  public function myphoto()
+  {
+      return view('admin.myphoto');
+  }
+  
+   public function delete(Request $request)
+  {
+      // 該当するNews Modelを取得
+      $photo = Photo::find($request->id);
+      // 削除する
+      $photo->delete();
+      return view('admin.myphoto');
+  }  
 }
