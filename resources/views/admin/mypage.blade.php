@@ -4,7 +4,6 @@
 @section('content')
     <div class="mycontainer">
             <?php $user = Auth::user(); ?>
-            <a href={{ route('profile.show', ['user_id' => Auth::user()->id]) }}><p class="mymenu">プロフィール</p></a>
             <h4 class="mypage-text-title">日記作成数：{{ count($user->travels) }}</h4>
                     <div class="row">
             <div class="col-md-4">

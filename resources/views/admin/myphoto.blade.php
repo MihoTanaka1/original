@@ -3,8 +3,10 @@
 
 @section('content')
     <div class="mycontainer">
-            <?php $user = Auth::user(); ?>
-            <a href={{ route('profile.show', ['user_id' => Auth::user()->id]) }}><p class="mymenu">プロフィール</p></a>
+        <?php $user = Auth::user(); ?>
+            <div class="col-md-4">
+                <a href="{{ action('PhotoController@add') }}" role="button" class="btn btn-primary">新規作成</a>
+            </div>
         @foreach($user->photo as $photo)
             <div class="mypost-list">
                 <div class="mypost-left">

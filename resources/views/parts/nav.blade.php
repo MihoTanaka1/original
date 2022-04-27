@@ -14,7 +14,6 @@
             </ul>
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
-                <li class="mr-5"><a class="dark" href="{{ url('/admin/mypage') }}">マイページ</a></li>
                 @guest
                     <li><a class="dark" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                     {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
@@ -24,16 +23,20 @@
                         {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('profile.show', ['user_id' => Auth::user()->id]) }}">
-                                プロフィール
+                            <a class="dropdown-item" href="{{ url('/admin/mypage') }}">
+                                投稿一覧
+                            </a>
+                            
+                            <a class="dropdown-item" href="{{ url('/admin/myphoto') }}">
+                                絶景写真
                             </a>
                             <a class="dropdown-item" href="{{ route('profile.show', ['user_id' => Auth::user()->id]) }}">
-                                絶景写真
+                                プロフィール
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                            {{ __('ログアウト') }}
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf

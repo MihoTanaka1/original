@@ -4,10 +4,9 @@
 @section('content')
     <div class="mycontainer">
         <div class="left-contents">
-
-                @if ($travel_form->image_path)
-                    <img src="{{ asset('storage/image/' . $travel_form->image_path) }}">
-                @endif
+            @if ($travel_form->image_path)
+                <img src="{{ asset('storage/image/' . $travel_form->image_path) }}">
+            @endif
         </div>
         <div class="right-contents">
             <div class="col-md-8 mx-auto">
