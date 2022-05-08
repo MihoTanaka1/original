@@ -3,7 +3,6 @@
 
 @section('content')
     <div class="mycontainer">
-        <h1>プロフィール</h1>
         <a href={{ action('ProfileController@edit' , ['id' => $profile_form->id]) }}><p class="mymenu">編集</p></a>
         <div class="left-contents">
             @if ($profile_form->image_path)
