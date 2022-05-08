@@ -1,3 +1,11 @@
+$ipad-width: 768px;
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+      @content;
+  }
+}
+
 img {
     width:100%;
 }
@@ -33,6 +41,9 @@ img {
   margin: 0 auto;
   margin-bottom: 10px;
   overflow: hidden;
+     @include media-query($ipad-width) {
+       width: 750px;
+     }
 }
 
 .news {
@@ -75,10 +86,22 @@ img {
     &:nth-child(3n){
       margin-right:0;
     }
+      @include media-query($ipad-width) {
+        display: block;
+        width: 80%;
+        margin-left:auto;
+        margin-right:auto;
+        border-bottom: none;
+      }
     a{
       color:#333;
     }
   }
+      @include media-query($ipad-width) {
+        display: block;
+        width: 100%;
+        border-bottom: none;
+    }
 }
 
 .image-list {

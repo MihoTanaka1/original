@@ -38,6 +38,12 @@ img {
   overflow: hidden;
 }
 
+@media screen and (max-width: 768px) {
+  .mycontainer {
+    width: 750px;
+  }
+}
+
 .news {
   font-size: 30px;
   width: 100px;
@@ -83,8 +89,26 @@ img {
   margin-right: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .list-area .list {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: none;
+  }
+}
+
 .list-area .list a {
   color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .list-area {
+    display: block;
+    width: 100%;
+    border-bottom: none;
+  }
 }
 
 .image-list {
@@ -240,6 +264,24 @@ img {
   left: 0px;
   width: 100%;
   height: 100%;
+}
+
+.travel-list {
+  width: 30%;
+  margin-right: 5%;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .travel-list {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.travel-list:nth-child(3n) {
+  margin-right: 0;
 }
 
 .travel-title {

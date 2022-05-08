@@ -5,7 +5,7 @@
     <div class="mycontainer">
         <div class="list-area">
                 @foreach($posts as $post)
-                    <div class="list">
+                    <div class="travel-list">
                         <a href="{{route('travel.show', ['info_id' => $post->id] )}}">
                             <div class="image-list">
                                 <div class="image-list-bg-travel"></div>
